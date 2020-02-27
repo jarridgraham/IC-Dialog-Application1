@@ -152,7 +152,7 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim focus As Integer
         VCDProp = TIS.Imaging.VCDHelpers.VCDSimpleModule.GetSimplePropertyContainer(IcImagingControl1.VCDPropertyItems)
-        For focus = 140 To 780 Step 20
+        For focus = TextBox2.Text To TextBox3.Text Step TextBox4.Text
             VCDProp.RangeValue(TIS.Imaging.VCDIDs.VCDID_Focus) = focus
             TextBox1.Text = focus
             TextBox1.Update()
@@ -160,4 +160,6 @@ Public Class Form1
             IcImagingControl1.MemorySaveImage(focus.ToString + ".bmp")
         Next
     End Sub
+
+
 End Class
