@@ -161,5 +161,20 @@ Public Class Form1
         Next
     End Sub
 
+    Private Sub TrackBar1_ValueChanged(sender As Object, e As EventArgs) Handles TrackBar1.ValueChanged
+        VCDProp = TIS.Imaging.VCDHelpers.VCDSimpleModule.GetSimplePropertyContainer(IcImagingControl1.VCDPropertyItems)
+        VCDProp.RangeValue(TIS.Imaging.VCDIDs.VCDID_Focus) = TrackBar1.Value
+        TextBox1.Text = TrackBar1.Value
+        TextBox1.Update()
 
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        TextBox2.Text = TrackBar1.Value
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        TextBox3.Text = TrackBar1.Value
+    End Sub
 End Class

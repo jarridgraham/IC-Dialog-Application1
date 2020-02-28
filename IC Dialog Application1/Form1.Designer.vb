@@ -30,7 +30,11 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.IcImagingControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdLive
@@ -107,33 +111,64 @@ Partial Class Form1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(669, 259)
+        Me.TextBox2.Location = New System.Drawing.Point(712, 259)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(78, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(35, 20)
         Me.TextBox2.TabIndex = 10
         Me.TextBox2.Text = "140"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(671, 290)
+        Me.TextBox3.Location = New System.Drawing.Point(712, 290)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(77, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(36, 20)
         Me.TextBox3.TabIndex = 11
         Me.TextBox3.Text = "780"
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(671, 320)
+        Me.TextBox4.Location = New System.Drawing.Point(669, 320)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(75, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(77, 20)
         Me.TextBox4.TabIndex = 12
         Me.TextBox4.Text = "40"
+        '
+        'TrackBar1
+        '
+        Me.TrackBar1.Location = New System.Drawing.Point(666, 213)
+        Me.TrackBar1.Maximum = 780
+        Me.TrackBar1.Minimum = 140
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(81, 45)
+        Me.TrackBar1.TabIndex = 13
+        Me.TrackBar1.Value = 140
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(668, 259)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(31, 19)
+        Me.Button3.TabIndex = 14
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(667, 290)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(31, 21)
+        Me.Button4.TabIndex = 15
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(761, 506)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.TrackBar1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
@@ -148,6 +183,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "IC Dialog Application1"
         CType(Me.IcImagingControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -164,4 +200,7 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TrackBar1 As TrackBar
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
